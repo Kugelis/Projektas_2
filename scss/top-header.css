@@ -1,0 +1,76 @@
+@charset "UTF-8";
+/* VIRŠUINĖ NAVIGACIJA ================================================================= */
+.top-header {
+  padding: 24px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-header .burger-btn,
+.top-header .burger-btn rect {
+  transition: all 0.3s;
+}
+
+/* PASLEPIAM NUO PRADZIU NUO MOBILAUS VAIZDO =========================== */
+.top-header .top-header__navigation,
+.top-header .top-header__contact-btn {
+  display: none;
+}
+
+.top-header .burger-btn {
+  cursor: pointer;
+}
+
+.top-header .burger-btn:hover {
+  transform: scale(1.1);
+}
+
+.top-header .burger-btn:hover rect {
+  fill: rgb(231, 139, 63);
+}
+
+@media (min-width: 768px) {
+  .top-header {
+    padding: 24px 32px;
+  }
+}
+@media (min-width: 1024px) {
+  /* ATVAIZDUOJAM TIES PLANSETE */
+  .top-header {
+    padding: 24px 40px;
+  }
+  .top-header .top-header__navigation,
+  .top-header .top-header__contact-btn {
+    display: flex;
+  }
+  .top-header .top-header__navigation {
+    gap: 40px;
+  }
+  .top-header .top-header__navigation li a {
+    line-height: 24px;
+    color: var(--text-color);
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+  }
+  .top-header .top-header__navigation li a:hover {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+  }
+  .top-header .top-header__contact-btn {
+    border: 1px solid var(--primary-color);
+    padding: 16px 24px;
+    border-radius: 40px;
+    color: var(--primary-color);
+    font-weight: 700;
+  }
+  .top-header .top-header__contact-btn:hover {
+    color: white;
+    background-color: var(--primary-color);
+    transition: all 0.3s;
+  }
+  .burger-btn {
+    display: none;
+  }
+}
+/* VIRŠUTINĖ NAVIGACIJA BAIGIASI ========================================================*//*# sourceMappingURL=top-header.css.map */

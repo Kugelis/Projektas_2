@@ -1,0 +1,80 @@
+/* PAGRINDINIO TURINIO PABAIGA ====================================== */
+.services-section {
+    padding: 0px 16px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: clamp(16px,1.2vw,20px);
+
+    &__article{
+        background-color: var(--services-bg-color);
+        border-radius: 20px;
+        padding: 24px;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        grid-column: span 12;
+    }
+
+    &__article > div{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__article > div h2{
+        font-weight: 700;
+        font-size: 20px;
+        color: var(--secondary-color)
+    }
+    
+    &__article > div p{
+        font-size: 14px;
+    }
+
+    @media (min-width: 768px){
+        .services-section{
+            padding: 0px 32px;
+        }
+        
+        &__article{
+            grid-column: span 6;
+            align-items: start;
+            text-align: left;
+        }
+    }
+
+    @media (min-width: 1024px){
+        &__article{
+            grid-column: span 3;
+        }
+    }
+
+    .animation-section{
+        min-height: 100vh;
+        background-color: var(--text-color);
+        margin-top: 50px;
+            .box{
+                width: 100px;
+                height: 100px;
+                background-color: #ff6a3e;
+                animation-name: example, backgroundColorChange;
+                animation-duration: 1.5s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-delay: 2s;
+                /* animation-timing-function: ; */
+            }
+    }
+
+    
+}
+
+
+
+
+
+
+
+
